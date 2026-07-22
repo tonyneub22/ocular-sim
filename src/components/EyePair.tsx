@@ -3,8 +3,8 @@ import { computeEyeState, PATHOLOGIES } from "../lib/pathologies";
 import type { LightSide } from "../lib/eyeState";
 import { useAnimationFrame } from "../lib/useAnimationFrame";
 
-function Eye({ cx, gazeX, gazeY, pupilDiameter, lidPosition, label }: {
-  cx: number; gazeX: number; gazeY: number; pupilDiameter: number; lidPosition: number; label: string;
+function Eye({ gazeX, gazeY, pupilDiameter, lidPosition, label }: {
+  gazeX: number; gazeY: number; pupilDiameter: number; lidPosition: number; label: string;
 }) {
   const px = 100 + gazeX;
   const py = 100 + gazeY;
@@ -45,8 +45,8 @@ export default function EyePair() {
         <button onClick={() => setLightSide('off')}>Light off</button>
       </div>
       <div style={{ display: 'flex', gap: 40, justifyContent: 'center' }}>
-        <Eye cx={0} gazeX={left.gazeX} gazeY={left.gazeY} pupilDiameter={left.pupilDiameter} lidPosition={left.lidPosition} label="Left eye" />
-        <Eye cx={0} gazeX={right.gazeX} gazeY={right.gazeY} pupilDiameter={right.pupilDiameter} lidPosition={right.lidPosition} label="Right eye" />
+        <Eye gazeX={left.gazeX} gazeY={left.gazeY} pupilDiameter={left.pupilDiameter} lidPosition={left.lidPosition} label="Left eye" />
+        <Eye gazeX={right.gazeX} gazeY={right.gazeY} pupilDiameter={right.pupilDiameter} lidPosition={right.lidPosition} label="Right eye" />
       </div>
     </div>
   );

@@ -172,7 +172,6 @@ function applyRestriction(base: EyeState, mods: PathologyModifier, eye: Side_): 
   if (!mods.restrict) return state;
   for (const r of mods.restrict) {
     if (r.eye !== eye) continue;
-    const maxSwing = 30; // degrees the eye would otherwise reach
     if (r.direction === 'abduct' && state.gazeX > 0) state.gazeX *= 1 - r.severity;
     if (r.direction === 'adduct' && state.gazeX < 0) state.gazeX *= 1 - r.severity;
     if (r.direction === 'elevate' && state.gazeY < 0) state.gazeY *= 1 - r.severity;
