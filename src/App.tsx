@@ -1,5 +1,5 @@
 function App() {
-  return <div>Ocular simulator</div>
+  return <div>Paige is love</div>
 }
 
 export default App
