@@ -1,5 +1,7 @@
+import EyePair from './components/EyePair'
+
 function App() {
-  return <div>Paige is love</div>
+  return <EyePair />
 }
 
 export default App
